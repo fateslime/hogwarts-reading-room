@@ -1,0 +1,39 @@
+# Local development and generated output
+node_modules/
+.local/
+.tools/
+playwright-report/
+test-results/
+*.log
+*.tar.gz
+*.zip
+*.7z
+*.rar
+.DS_Store
+Thumbs.db
+# Private chat records and submission bundles
+conversation-exports/
+conversations/
+assignment-submission/
+chat-*.json
+chat-*.md
+chat-*.txt
+# Hosting identity, credentials and local configuration
+.openai/
+.codex/
+.agents/
+.aws/
+.env
+.env.*
+!.env.example
+auth.json
+credentials.json
+credentials-*.json
+*.pem
+*.key
+*.p12
+*.pfx
+*.jsonl
+*.sqlite
+*.sqlite3
+*.db

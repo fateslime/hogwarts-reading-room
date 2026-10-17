@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f3e9"><meta name="description" content="沿著七部小說的足跡，走進哈利波特的魔法世界。探索人物、神奇動物，體驗十六題分院儀式與三十題學生知識測驗。">
+  <title>霍格華茲藏書室｜七部曲閱讀地圖</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;600;700;900&family=Noto+Sans+TC:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="data.js" defer></script><script src="quiz.js" defer></script><script src="locales/en.js" defer></script><script src="i18n.js" defer></script><script src="app.js" defer></script><script src="exam-data.js" defer></script><script src="exam.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">跳至主要內容</a>
+<svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
+  <symbol id="hat" viewBox="0 0 48 48"><path d="M7 35c3-9 10-11 11-23 1-5 8-9 14-8l-6 9 10 22c14 5 7 10-12 10S-2 41 7 35Zm0 0c10 5 20 5 29 0M17 24l5 2m6-2 5-2m-13 9 10 1"/></symbol>
+  <symbol id="search" viewBox="0 0 24 24"><circle cx="10" cy="10" r="6"/><path d="m15 15 6 6"/></symbol>
+</defs></svg>
+<header class="site-header" id="top"><div class="header-inner">
+  <a class="brand" href="#top" aria-label="霍格華茲藏書室，返回首頁"><span>霍格華茲藏書室</span></a>
+  <div class="language-switch" role="group" aria-label="Language / 語言" data-no-i18n><button type="button" data-language="zh-Hant" lang="zh-Hant" aria-pressed="true">中文</button><span aria-hidden="true">/</span><button type="button" data-language="en" lang="en" aria-pressed="false">English</button></div>
+  <button class="menu-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="開啟導覽選單"><span></span><span></span><span></span></button>
+  <nav id="main-nav" aria-label="主要導覽"><a href="#world">世界背景</a><a href="#books">七部小說</a><a href="#characters">人物長廊</a><a href="#creatures">神奇動物</a><a href="#sorting">分院儀式</a><a class="nav-quiz" href="#student-exam">學生測試</a></nav>
+</div></header>
+<main id="main">
+<section class="hero container" aria-labelledby="hero-title">
+  <div class="hero-copy"><h1 id="hero-title">從一封信，<br>走進魔法世界。</h1><p class="hero-description">從《神秘的魔法石》到《死神的聖物》，<br>探索七部小說、人物與神奇動物。</p><a class="button primary" href="#books">展開閱讀地圖 </a></div>
+  <figure class="hero-art"><img src="assets/castle.png" alt="以鋼筆線描與淡彩描繪的霍格華茲城堡、石橋和送信貓頭鷹" width="1536" height="1024" fetchpriority="high"></figure>
+</section>
+<section id="world" class="world-section container" aria-labelledby="world-title">
+  <div class="world-heading"><h2 id="world-title">魔法世界</h2><button class="text-link" id="world-toggle" aria-expanded="false" aria-controls="world-content">閱讀介紹</button></div>
+  <div id="world-content" class="world-content" hidden><article><h3>魔法社會</h3><p>故事從英國展開。巫師與女巫生活在一般人——「麻瓜」——不知情的魔法社會中。斜角巷、魔法部與九又四分之三月台，讓熟悉的日常出現另一個入口。</p></article><article><h3>霍格華茲</h3><p>霍格華茲魔法與巫術學院是哈利的學校，也是他第一次感受到歸屬的地方。四大學院各有重視的特質；課堂之外，友誼、選擇與勇氣同樣值得學習。</p></article><article><h3>七部曲的故事</h3><p>J. K. 羅琳的七部原著，陪伴哈利從初識魔法走向面對責任。這份導覽以小說為主，帶你認識故事起點，並由你決定何時打開重大劇情。</p><a class="text-link" href="https://stories.jkrowling.com/harrypotter/the-harry-potter-stories/" target="_blank" rel="noopener noreferrer">作者的七部曲介紹</a></article></div>
+</section>
+<section id="books" class="books-section container" aria-labelledby="books-title">
+  <div class="section-heading"><div><h2 id="books-title">七部小說</h2></div></div>
+  <div class="book-route" id="book-route" role="tablist" aria-label="選擇小說"></div>
+  <article class="book-panel" id="book-panel" role="tabpanel" tabindex="0" aria-labelledby="book-tab-0"></article>
+  <div class="reading-tools"><span id="reading-progress">已探索 0 / 7 部</span><progress id="reading-meter" max="7" value="0" aria-label="小說探索進度"></progress><button class="text-link subtle" id="reset-reading">重設進度</button><label class="spoiler-toggle"><input type="checkbox" id="spoilers"><span class="switch" aria-hidden="true"></span><span id="spoiler-label">劇透保護中</span></label></div>
+</section>
+<section id="characters" class="characters-section container" aria-labelledby="characters-title">
+  <div class="section-heading"><div><h2 id="characters-title">人物長廊</h2></div></div>
+  <div class="characters-layout">
+  <div class="character-browser"><div class="filter-row"><label class="search-field"><svg class="icon"><use href="#search"/></svg><span class="sr-only">搜尋人物姓名或關鍵字</span><input id="character-search" type="search" placeholder="搜尋人物、學院或關鍵字…" autocomplete="off"></label><label><span class="sr-only">人物身分</span><select id="character-filter"><option value="all">所有人物</option><option value="student">學生</option><option value="teacher">教職員</option><option value="other">其他人物</option></select></label></div><label class="saved-filter"><input id="character-favorites" type="checkbox">只看收藏</label><div id="character-list" class="character-list"></div><p id="character-count" class="result-count" role="status"></p></div></div>
+</section>
+<section id="creatures" class="creatures-section" aria-labelledby="creatures-title"><div class="container">
+  <div class="section-heading"><div><h2 id="creatures-title">神奇動物圖鑑</h2></div></div>
+  <div class="creature-toolbar"><div class="filter-buttons" role="group" aria-label="篩選神奇動物"><button class="filter active" data-creature-filter="all" aria-pressed="true">全部奇獸</button><button class="filter" data-creature-filter="flying" aria-pressed="false">有翼生物</button><button class="filter" data-creature-filter="land" aria-pressed="false">陸地生物</button><button class="filter" data-creature-filter="water" aria-pressed="false">水生族群</button></div><span class="small-label" id="creature-count" role="status">12 種</span></div>
+  <div class="creature-search-row"><label class="search-field"><span class="sr-only">搜尋神奇動物</span><input id="creature-search" type="search" placeholder="搜尋名稱、棲地或能力…" autocomplete="off"></label><label class="saved-filter"><input id="creature-favorites" type="checkbox">只看收藏</label></div>
+  <div class="creature-grid" id="creature-grid"></div><div class="more-creatures"><button class="text-link" id="creatures-more">顯示其餘 6 種</button></div>
+</div></section>
+<section id="sorting" class="sorting-section container" aria-labelledby="sorting-title"><div class="sorting-intro"><svg class="icon sorting-hat" aria-hidden="true"><use href="#hat"/></svg><h2 id="sorting-title">分類帽正在等你。</h2><p>回答十六個問題，探索你的學院傾向。</p></div><div id="quiz" class="quiz-panel" aria-label="分院測驗"></div></section>
+<section id="student-exam" class="student-exam-section container" aria-labelledby="student-exam-title"><div class="section-heading"><h2 id="student-exam-title">哈利波特學生測試</h2></div><div id="exam-sheet" class="exam-sheet" aria-label="三十題故事知識測驗"></div><p id="exam-save-status" class="exam-save-status" role="status"></p></section>
+<section class="about-section container" id="about" aria-labelledby="about-title"><div><h2 id="about-title">關於站長</h2><p id="owner-intro">你好，我是藏書室站長。我將哈利波特七部小說的人物、神奇動物與故事介紹整理在這裡，希望讓初次閱讀或重溫系列的人，都能方便查找。</p></div><div id="skills"><h3>魔法技能</h3><ul class="skill-list"><li><span>HTML</span>語意結構與可讀內容</li><li><span>CSS</span>書籍排版與響應式設計</li><li><span>JavaScript</span>探索互動與兩種測驗</li></ul></div><div id="contact"><h3>貓頭鷹郵局</h3><p id="contact-description">聯絡信箱尚未公開。可以先寫下想說的話，複製後留存。</p><button id="contact-open" class="text-link">寫一封信 </button></div></section>
+</main>
+<footer class="site-footer"><div class="container footer-inner"><a class="brand footer-brand" href="#top"><span>霍格華茲藏書室</span></a><p>非官方魔法世界導覽 · 本站提供原創分院測驗<br><span>本站使用原創整理文字、AI 輔助城堡與奇獸插畫，以及 HarryPotter.com 人物電影照片；相關權利屬原權利人。</span></p><button class="text-link" id="sources-open">參考資料</button><a href="#top" class="back-top" aria-label="回到頁面頂端">↑</a></div></footer>
+<dialog id="detail-dialog" aria-labelledby="dialog-title"><div class="dialog-controls"><button class="dialog-language text-link" type="button" data-language-toggle data-no-i18n>English</button><button class="dialog-close" aria-label="關閉視窗">×</button></div><div id="dialog-content"></div></dialog>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<noscript><div class="noscript">請啟用 JavaScript，以使用小說探索、圖鑑、分院與學生測驗。網站背景介紹仍可閱讀。</div></noscript>
+</body></html>
