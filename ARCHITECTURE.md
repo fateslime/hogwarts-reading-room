@@ -1,6 +1,6 @@
 # 專案架構與資料契約
 
-維護基準：2026-10-16。這份文件描述目前實作；歷史版本見 VERIFICATION.md。給下一位維護者的入口是 AGENTS.md，具體更新步驟見 MAINTENANCE.md。
+維護基準：2026-10-17。這份文件描述目前實作；歷史版本見 VERIFICATION.md。給下一位維護者的入口是 AGENTS.md，具體更新步驟見 MAINTENANCE.md。
 
 ## 1. 產品範圍與設計
 
@@ -29,6 +29,7 @@ hogwarts-reading-room/
 ├─ MAINTENANCE.md               更新、測試、發布與故障處理
 ├─ README.md                    使用者快速導覽
 ├─ VERIFICATION.md              按日期保留的驗證紀錄
+├─ TERMINOLOGY.md              台灣譯名與核對依據
 ├─ SOURCES.md                   設定來源、小說章節與題目索引
 ├─ PHOTO-SOURCES.md             現用人物照片來源
 ├─ ASSET-PROMPTS.md             插畫提示詞與歷史製作紀錄
@@ -133,16 +134,21 @@ flowchart TD
 
 人物搜尋包含中文姓名、英文姓名、學院、標籤、facts，以及學院／facts 的英譯。動物搜尋包含中英文名、棲地、能力與對應英譯。輸入值不隨語言切換改寫，兩種語言皆可搜尋。
 
+### 四院介紹
+
+index.html 的 #houses 提供四個語意 article，位於 #sorting 之前。導覽「學院與分院」連至 #houses；學院文字及創辦人、動物、小說色彩同步收進英文目錄。沒有新增裝飾圖示。
+
 ### 十六題分院
 
 狀態流：welcome → question → result，最高分同分時先進入 tie。
-每題四個選項，各有 text、house、secondary。主要學院 +3、次要學院 +1，十六題共 64 分。最高分同分必須由使用者從同分學院中選擇。百分比是作答分布，不能宣稱心理診斷或能力評分。
+第 3 版每題四個選項，各有 text、house；沒有 secondary。所選學院 +1，十六題共 16 分。每題四院各一個選項，整份題庫中每院在四個位置各出現四次。最高分同分必須由使用者從同分學院中選擇。百分比是作答分布，不能宣稱心理診斷或能力評分。
 
 純函式 API：
 
 - validAnswers(answers, complete=false)：驗證長度、null 與 0–3 整數。
 - score(answers)：只接受完整答案，回傳 scores、tied、total。
-- restoreDraft(raw)：還原十六題；舊八題答案保留並補八個 null。
+- version：目前為 3。
+- restoreDraft(raw)：只還原 quizVersion:3 的有效十六題資料，回傳 answers、index、updated。舊八題、第 2 版或未知版本不能套用新題意，回傳空分院答案；有舊作答時 updated:true，由 app.js 顯示重新作答原因。閱讀與收藏由 app.js 獨立還原，不清除整組 localStorage。
 
 ### 三十題學生測驗
 
@@ -171,7 +177,7 @@ StudentExam API：validAnswers、gradeFor、score、restore。score 回傳 corre
 
 | localStorage key | 保存資料 | 隔離目的 |
 | --- | --- | --- |
-| hogwarts-reading-room-v1 | visited、currentBook、answers、quizIndex、resultHouse、favorites、quizVersion:2 | 閱讀／收藏／分院 |
+| hogwarts-reading-room-v1 | visited、currentBook、answers、quizIndex、resultHouse、favorites、quizVersion:3 | 閱讀／收藏／分院 |
 | hogwarts-student-exam-v1 | version:1、answers[30]、index、completed、best | 學生測驗 |
 | hogwarts-language-v1 | zh-Hant 或 en 字串 | 顯示語言 |
 

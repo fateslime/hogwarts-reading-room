@@ -20,7 +20,7 @@
   <a class="brand" href="#top" aria-label="霍格華茲藏書室，返回首頁"><span>霍格華茲藏書室</span></a>
   <div class="language-switch" role="group" aria-label="Language / 語言" data-no-i18n><button type="button" data-language="zh-Hant" lang="zh-Hant" aria-pressed="true">中文</button><span aria-hidden="true">/</span><button type="button" data-language="en" lang="en" aria-pressed="false">English</button></div>
   <button class="menu-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="開啟導覽選單"><span></span><span></span><span></span></button>
-  <nav id="main-nav" aria-label="主要導覽"><a href="#world">世界背景</a><a href="#books">七部小說</a><a href="#characters">人物長廊</a><a href="#creatures">神奇動物</a><a href="#sorting">分院儀式</a><a class="nav-quiz" href="#student-exam">學生測試</a></nav>
+  <nav id="main-nav" aria-label="主要導覽"><a href="#world">世界背景</a><a href="#books">七部小說</a><a href="#characters">人物長廊</a><a href="#creatures">神奇動物</a><a href="#houses">學院與分院</a><a class="nav-quiz" href="#student-exam">學生測試</a></nav>
 </div></header>
 <main id="main">
 <section class="hero container" aria-labelledby="hero-title">
@@ -48,8 +48,17 @@
   <div class="creature-search-row"><label class="search-field"><span class="sr-only">搜尋神奇動物</span><input id="creature-search" type="search" placeholder="搜尋名稱、棲地或能力…" autocomplete="off"></label><label class="saved-filter"><input id="creature-favorites" type="checkbox">只看收藏</label></div>
   <div class="creature-grid" id="creature-grid"></div><div class="more-creatures"><button class="text-link" id="creatures-more">顯示其餘 6 種</button></div>
 </div></section>
+<section id="houses" class="houses-section container" aria-labelledby="houses-title">
+  <h2 id="houses-title">四大學院</h2>
+  <div class="house-grid">
+    <article class="house-entry gryffindor" aria-labelledby="house-gryffindor"><h3 id="house-gryffindor">葛來分多</h3><p class="house-description">珍惜勇氣、膽識與堅定。從哈利的挺身而出，到奈威逐漸長出的自信，這裡看重的是面對害怕時，仍願意守住自己的信念。</p><p class="house-history">由高錐客・葛來分多創立，以獅子為象徵，代表色是紅與金。</p></article>
+    <article class="house-entry hufflepuff" aria-labelledby="house-hufflepuff"><h3 id="house-hufflepuff">赫夫帕夫</h3><p class="house-description">重視勤奮、忠誠與公平。西追對競爭對手的尊重，讓人看見這個學院的原則；可靠的合作與日復一日的付出，同樣能成就重要的事。</p><p class="house-history">由海加・赫夫帕夫創立，以獾為象徵，代表色是黃與黑。</p></article>
+    <article class="house-entry ravenclaw" aria-labelledby="house-ravenclaw"><h3 id="house-ravenclaw">雷文克勞</h3><p class="house-description">欣賞智慧、求知與獨立思考。露娜不同於常人的觀點，也是這份精神的一種樣貌；這裡歡迎提問，也珍惜看待世界的不同方式。</p><p class="house-history">由羅威娜・雷文克勞創立，以鷹為象徵，小說中的代表色是藍與青銅。</p></article>
+    <article class="house-entry slytherin" aria-labelledby="house-slytherin"><h3 id="house-slytherin">史萊哲林</h3><p class="house-description">看重抱負、機敏與決心。懂得運用資源、為目標尋找途徑，是這個學院鮮明的特質；而如何使用自己的能力，仍取決於每個人的選擇。</p><p class="house-history">由薩拉札・史萊哲林創立，以蛇為象徵，代表色是綠與銀。</p></article>
+  </div>
+</section>
 <section id="sorting" class="sorting-section container" aria-labelledby="sorting-title"><div class="sorting-intro"><svg class="icon sorting-hat" aria-hidden="true"><use href="#hat"/></svg><h2 id="sorting-title">分類帽正在等你。</h2><p>回答十六個問題，探索你的學院傾向。</p></div><div id="quiz" class="quiz-panel" aria-label="分院測驗"></div></section>
-<section id="student-exam" class="student-exam-section container" aria-labelledby="student-exam-title"><div class="section-heading"><h2 id="student-exam-title">哈利波特學生測試</h2></div><div id="exam-sheet" class="exam-sheet" aria-label="三十題故事知識測驗"></div><p id="exam-save-status" class="exam-save-status" role="status"></p></section>
+<section id="student-exam" class="student-exam-section container" aria-labelledby="student-exam-title"><div class="section-heading"><h2 id="student-exam-title">哈利波特學生測試：普等巫測</h2></div><div id="exam-sheet" class="exam-sheet" aria-label="三十題故事知識測驗"></div><p id="exam-save-status" class="exam-save-status" role="status"></p></section>
 <section class="about-section container" id="about" aria-labelledby="about-title"><div><h2 id="about-title">關於站長</h2><p id="owner-intro">你好，我是藏書室站長。我將哈利波特七部小說的人物、神奇動物與故事介紹整理在這裡，希望讓初次閱讀或重溫系列的人，都能方便查找。</p></div><div id="skills"><h3>魔法技能</h3><ul class="skill-list"><li><span>HTML</span>語意結構與可讀內容</li><li><span>CSS</span>書籍排版與響應式設計</li><li><span>JavaScript</span>探索互動與兩種測驗</li></ul></div><div id="contact"><h3>貓頭鷹郵局</h3><p id="contact-description">聯絡信箱尚未公開。可以先寫下想說的話，複製後留存。</p><button id="contact-open" class="text-link">寫一封信 </button></div></section>
 </main>
 <footer class="site-footer"><div class="container footer-inner"><a class="brand footer-brand" href="#top"><span>霍格華茲藏書室</span></a><p>非官方魔法世界導覽 · 本站提供原創分院測驗<br><span>本站使用原創整理文字、AI 輔助城堡與奇獸插畫，以及 HarryPotter.com 人物電影照片；相關權利屬原權利人。</span></p><button class="text-link" id="sources-open">參考資料</button><a href="#top" class="back-top" aria-label="回到頁面頂端">↑</a></div></footer>

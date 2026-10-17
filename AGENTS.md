@@ -8,6 +8,8 @@
 - 保留米色紙張、酒紅、書籍排版、留白與分類帽。避免新增大量小圖示、副標或裝飾附註。
 - 中文與英文是同一畫面，所有新增文案同步更新 dist/locales/en.js；動態句型在 dist/i18n.js。不要翻譯使用者輸入。
 - 不改既有 DOM ID、data-* 行為識別、內容 id、題目／選項順序，除非同時處理關聯與保存資料遷移。
+- 台灣譯名以 TERMINOLOGY.md 的皇冠來源為準，中文修改需同步英文查找 key。
+- 分院第 3 版只給所選院 1 分，四院選項位置均衡；改題意時不可沿用舊答案。
 - 分院 16 題、學生測驗 30 題；O.W.L.s 分數門檻屬本站設計，不是官方規定。
 - localStorage 的三組 key、資料格式與限制見 ARCHITECTURE.md；語言切換不能清除進度、收藏或草稿。
 - 目前人物引用官方 WebP 電影照片；舊 SVG 只供歷史參考。以 data.js 的 portrait 與 PHOTO-SOURCES.md 為準，不擅自變更素材方向。
@@ -19,7 +21,7 @@
 
 - npm run check；npm test。
 - 本機預覽：node tools/preview.cjs，網址 http://127.0.0.1:8765/。
-- 與變更相關的瀏覽器流程：tests/browser.cjs、expansion.cjs、exam-browser.cjs、i18n-browser.cjs。環境需求見 MAINTENANCE.md。
+- 與變更相關的瀏覽器流程：tests/browser.cjs、expansion.cjs、exam-browser.cjs、i18n-browser.cjs、sorting-browser.cjs。環境需求見 MAINTENANCE.md。
 - 至少檢查 320px 手機與桌機；共用版面／語言變更檢查 320、390、768、1024、1440px。
 - 更新 VERIFICATION.md，明確區分實際通過、未執行與環境限制；不要複製舊結果當本次證據。
 - 更新架構／資料契約時同步修訂兩份維護文件；來源 ZIP 不含 .local/.git/node_modules 或憑證。

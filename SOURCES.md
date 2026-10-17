@@ -1,6 +1,6 @@
 # 內容來源
 
-查閱日期：2026-10-12。使用原創繁體中文摘要，以七部小說為核心；小說與電影有差異時以小說為準。外部頁面可能包含劇情。
+最近核對日期：2026-10-17。使用原創繁體中文摘要，以七部小說為核心；小說與電影有差異時以小說為準。外部頁面可能包含劇情。
 
 ## 人物與神奇動物
 
@@ -12,7 +12,7 @@
 - [跩哥・馬份](https://www.harrypotter.com/fact-file/characters-and-pets/draco-malfoy)
 - [阿不思・鄧不利多](https://www.harrypotter.com/fact-file/characters-and-pets/albus-dumbledore)
 - [賽佛勒斯・石內卜](https://www.harrypotter.com/fact-file/characters-and-pets/severus-snape)
-- [米奈娃・麥](https://www.harrypotter.com/fact-file/characters-and-pets/minerva-mcgonagall)
+- [麥教授](https://www.harrypotter.com/fact-file/characters-and-pets/minerva-mcgonagall)
 - [魯霸・海格](https://www.harrypotter.com/fact-file/characters-and-pets/rubeus-hagrid)
 - [天狼星・布萊克](https://www.harrypotter.com/fact-file/characters-and-pets/sirius-black)
 - [多比](https://www.harrypotter.com/fact-file/characters-and-pets/dobby)
@@ -39,14 +39,14 @@
 
 ## 學生測驗
 
-題目、選項與解析為本站撰寫，未搬用官方題庫。O／E／A 及格、P／D／T 未及格的分級名稱經官方百科核對；27、23、18、12、6 分的門檻由本站設計，不是原作公布的數字。中文等第文字是本站說明。
+題目、選項與解析為本站撰寫，未搬用官方題庫。O／E／A 及格、P／D／T 未及格的分級名稱經官方百科核對；27、23、18、12、6 分的門檻由本站設計，不是原作公布的數字。中文等第使用台灣皇冠版名稱；鼓勵評語由本站撰寫。譯名核對表與出版社／輔助來源見 [TERMINOLOGY.md](TERMINOLOGY.md)。
 
 - [O.W.L.s 官方等第](https://www.harrypotter.com/fact-file/magical-miscellany/o-w-l-s)
 - [魚鰓草：小說由多比提供，電影改為奈威](https://www.harrypotter.com/fact-file/plants-and-potions/gillyweed)
 - [意若思鏡與雙面鏡](https://www.harrypotter.com/features/the-importance-of-mirrors-in-the-harry-potter-books)
 - [雙面鏡與阿波佛](https://www.harrypotter.com/fact-file/objects/two-way-mirror)
 - [混血王子的身世、蛇妖與寶劍](https://www.harrypotter.com/features/every-harry-potter-puzzle-hermione-solved-that-made-us-kick-ourselves)
-- [消光器與糞石](https://www.harrypotter.com/features/magical-objects-from-philosophers-stone-that-became-important-later)
+- [熄燈器與毛糞石](https://www.harrypotter.com/features/magical-objects-from-philosophers-stone-that-became-important-later)
 - [分靈體的經歷與 R.A.B.](https://www.harrypotter.com/features/history-of-voldemorts-horcruxes)
 - [接骨木魔杖的效忠](https://www.harrypotter.com/features/everything-we-know-about-the-elder-wand)
 - [哈利用接骨木魔杖修復自己的魔杖](https://www.harrypotter.com/features/39-favourite-harry-potter-moments)
@@ -79,7 +79,7 @@
 | 19：鄧不利多的軍隊，主要在哪裡練習防禦魔法？ | 鳳凰會的密令 | 18 |
 | 20：史拉轟介紹的「福來福喜」，會帶來哪一種效果？ | 混血王子的背叛 | 9 |
 | 21：假分靈體小金匣裡的署名「R.A.B.」，指的是誰？ | 死神的聖物 | 10 |
-| 22：哈利最後在哪裡找到雷文克勞的冠冕？ | 死神的聖物 | 31 |
+| 22：哈利最後在哪裡找到雷文克勞的王冕？ | 死神的聖物 | 31 |
 | 23：葛來分多的寶劍為何能摧毀分靈體？ | 死神的聖物 | 15 |
 | 24：在最後決戰前，哪一件事使接骨木魔杖的效忠從跩哥轉向哈利？ | 死神的聖物 | 36 |
 | 25：鄧不利多留給榮恩、後來協助他回到夥伴身邊的物品是什麼？ | 死神的聖物 | 19 |
@@ -92,3 +92,12 @@
 ## 插畫
 
 城堡與奇獸使用內建 image_gen 生成。人物於 2026-10-13 依使用者允許改採照片的指示，使用 HarryPotter.com 官方人物百科的電影照片。各人物檔案附可點擊來源；完整素材網址與日期見 PHOTO-SOURCES.md。圖片權利歸原權利人，來源標註不表示取得免版權授權。先前插畫嘗試與 SVG 版本保留於 ASSET-PROMPTS.md 作為歷史紀錄。
+
+## 台灣譯名與四院介紹補充
+
+- [台灣譯名核對表](TERMINOLOGY.md)
+- [皇冠魔法世界詞彙](https://www.crown.com.tw/harrypotter/375331_page05.html)
+- [皇冠普等巫測等第](https://epaper.crown.com.tw/np/news183.htm)
+- [HarryPotter.com 四大學院介紹](https://www.harrypotter.com/features/hogwarts-house-meanings)
+
+分院 16 題為本站原創情境，非官方題庫或心理量表。第 3 版移除次要加分、平衡四院選項位置，並改寫把合理規劃集中於特定學院的措辭。數學對稱不代表真實使用者必然各有四分之一進入每院。

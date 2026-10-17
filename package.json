@@ -4,7 +4,7 @@
   "private": true,
   "description": "霍格華茲藏書室：七部曲互動閱讀地圖",
   "scripts": {
-    "test": "node --test tests/quiz.test.cjs tests/exam.test.cjs tests/i18n.test.cjs",
+    "test": "node --test tests/quiz.test.cjs tests/exam.test.cjs tests/i18n.test.cjs tests/terminology.test.cjs",
     "check": "node --check dist/data.js && node --check dist/quiz.js && node --check dist/locales/en.js && node --check dist/i18n.js && node --check dist/app.js && node --check dist/exam-data.js && node --check dist/exam.js",
     "preview": "node tools/preview.cjs",
     "test:browser": "node tests/browser.cjs && node tests/expansion.cjs && node tests/exam-browser.cjs && node tests/i18n-browser.cjs"

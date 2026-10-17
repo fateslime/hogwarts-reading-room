@@ -206,7 +206,7 @@ window.LibraryData = {
         ],
         [
           "專長",
-          "巫師棋、魁地奇守門"
+          "巫師棋、魁地奇守門手"
         ],
         [
           "後來的魔杖",
@@ -271,8 +271,8 @@ window.LibraryData = {
       "initial": "N",
       "role": "student",
       "house": "葛來分多",
-      "tags": "成長・堅持・草藥學",
-      "intro": "起初有些害羞、容易緊張，卻對草藥學很有天分。勇氣在他身上，是一點一滴慢慢長成的。",
+      "tags": "成長・堅持・藥草學",
+      "intro": "起初有些害羞、容易緊張，卻對藥草學很有天分。勇氣在他身上，是一點一滴慢慢長成的。",
       "story": "奈威對植物的觀察與照護，比他在某些課堂上的表現更能顯出才能。他常為走失的蟾蜍或忘記的密碼煩惱，但也會為自己認為對的事站出來。和同伴一起練習魔法，讓他的信心逐步增長。",
       "slug": "neville-longbottom",
       "facts": [
@@ -282,7 +282,7 @@ window.LibraryData = {
         ],
         [
           "專長",
-          "草藥學"
+          "藥草學"
         ],
         [
           "所屬",
@@ -421,7 +421,7 @@ window.LibraryData = {
       "portraitSource": "https://www.harrypotter.com/fact-file/characters-and-pets/severus-snape"
     },
     {
-      "name": "米奈娃・麥",
+      "name": "麥教授",
       "english": "Minerva McGonagall",
       "initial": "M",
       "role": "teacher",
@@ -726,13 +726,13 @@ window.LibraryData = {
       "book": 1,
       "tag": "密室・古老傳說",
       "intro": "古老傳說裡的巨大蛇類，也是第二部重要謎團的核心。",
-      "detail": "蛇妖的凝視極為危險。牠的存在把密室傳說、蛇語與校園事件串在一起；如果還沒讀完第二部，不妨先保留疑問，等故事自己揭曉。",
+      "detail": "蛇妖的凝視極為危險。牠的存在把密室傳說、爬說語與校園事件串在一起；如果還沒讀完第二部，不妨先保留疑問，等故事自己揭曉。",
       "note": "這份圖鑑只介紹基本設定；事件真相收在小說的劇透區。",
       "slug": "basilisk",
       "habitat": "小說中的密室",
       "ability": "危險的凝視、劇毒尖牙",
       "care": "直接對視可能致命；間接看見眼睛也可能石化。",
-      "extra": "蛇妖能理解蛇語，壽命極長。第二部把牠的特徵與校園線索連在一起，完整事件經過可在小說區開啟劇透後閱讀。",
+      "extra": "蛇妖能理解爬說語，壽命極長。第二部把牠的特徵與校園線索連在一起，完整事件經過可在小說區開啟劇透後閱讀。",
       "related": [
         0
       ],
@@ -916,6 +916,22 @@ window.LibraryData = {
     [
       "HarryPotter.com｜O.W.L.s 等第",
       "https://www.harrypotter.com/fact-file/magical-miscellany/o-w-l-s"
+    ],
+    [
+      "皇冠｜人物介紹",
+      "https://www.crown.com.tw/harrypotter/harrypotter2000/people.htm"
+    ],
+    [
+      "皇冠｜魔法世界詞彙",
+      "https://www.crown.com.tw/harrypotter/375331_page05.html"
+    ],
+    [
+      "皇冠｜普等巫測等第",
+      "https://epaper.crown.com.tw/np/news183.htm"
+    ],
+    [
+      "HarryPotter.com｜四大學院介紹",
+      "https://www.harrypotter.com/features/hogwarts-house-meanings"
     ]
   ]
 };

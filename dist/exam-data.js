@@ -71,7 +71,7 @@
   {
     "question": "哈利在葛來分多魁地奇隊擔任什麼位置？",
     "options": [
-      "看守手",
+      "守門手",
       "打擊手",
       "搜捕手",
       "追蹤手"
@@ -202,7 +202,7 @@
     "question": "《阿茲卡班的逃犯》中，妙麗用哪一樣物品兼顧同時上課的課表？",
     "options": [
       "儲思盆",
-      "消光器",
+      "熄燈器",
       "記憶球",
       "時光器"
     ],
@@ -267,17 +267,17 @@
     "question": "假分靈體小金匣裡的署名「R.A.B.」，指的是誰？",
     "options": [
       "天狼星・布萊克",
-      "雷古勒斯・布萊克（Regulus Arcturus Black）",
+      "獅子阿爾發・布萊克（Regulus Arcturus Black）",
       "魯霸・海格",
       "阿不思・鄧不利多"
     ],
     "answer": 1,
     "book": 6,
     "chapter": 10,
-    "explanation": "R.A.B. 是天狼星的弟弟 Regulus Arcturus Black（雷古勒斯・布萊克）。怪角的敘述揭開了他調換小金匣、反抗佛地魔的經過。"
+    "explanation": "R.A.B. 是天狼星的弟弟 Regulus Arcturus Black（獅子阿爾發・布萊克）。怪角的敘述揭開了他調換小金匣、反抗佛地魔的經過。"
   },
   {
-    "question": "哈利最後在哪裡找到雷文克勞的冠冕？",
+    "question": "哈利最後在哪裡找到雷文克勞的王冕？",
     "options": [
       "古靈閣的金庫",
       "霍格華茲的湖底",
@@ -287,7 +287,7 @@
     "answer": 3,
     "book": 6,
     "chapter": 31,
-    "explanation": "冠冕藏在萬應室堆滿隱藏物品的空間。哈利六年級藏魔藥課本時其實已經見過它，當時尚未明白其意義。"
+    "explanation": "王冕藏在萬應室堆滿隱藏物品的空間。哈利六年級藏魔藥課本時其實已經見過它，當時尚未明白其意義。"
   },
   {
     "question": "葛來分多的寶劍為何能摧毀分靈體？",
@@ -321,12 +321,12 @@
       "金探子",
       "劫盜地圖",
       "時光器",
-      "消光器"
+      "熄燈器"
     ],
     "answer": 3,
     "book": 6,
     "chapter": 19,
-    "explanation": "消光器除了收放光線，也讓榮恩聽見妙麗的聲音，並透過一道光找到返回夥伴身邊的路。"
+    "explanation": "熄燈器除了收放光線，也讓榮恩聽見妙麗的聲音，並透過一道光找到返回夥伴身邊的路。"
   },
   {
     "question": "鄧不利多把重生石藏在哪一件留給哈利的物品裡？",
@@ -360,12 +360,12 @@
       "變身水",
       "曼德拉草葉",
       "福來福喜",
-      "糞石（bezoar）"
+      "毛糞石（bezoar）"
     ],
     "answer": 3,
     "book": 5,
     "chapter": 18,
-    "explanation": "哈利想到混血王子在魔藥課本上的筆記，把糞石塞進榮恩嘴裡。它是取自山羊胃中的石狀物，能解多種毒。"
+    "explanation": "哈利想到混血王子在魔藥課本上的筆記，把毛糞石塞進榮恩嘴裡。它是取自山羊胃中的石狀物，能解多種毒。"
   },
   {
     "question": "哈利透過雙面鏡碎片看見的藍眼睛，實際屬於誰？",
@@ -399,10 +399,10 @@
   const grades=[
     {letter:'O',english:'Outstanding',label:'傑出',min:27,passed:true,message:'你記得細節，也能串起跨越七部小說的伏筆。'},
     {letter:'E',english:'Exceeds Expectations',label:'超乎期待',min:23,passed:true,message:'你已相當熟悉故事，再重溫幾段細節就更完整了。'},
-    {letter:'A',english:'Acceptable',label:'及格',min:18,passed:true,message:'你掌握了不少重要情節，還有幾條故事線等著重新發現。'},
-    {letter:'P',english:'Poor',label:'待加強',min:12,passed:false,message:'你已找到一些熟悉的線索，可以從答錯題目的相關小說開始重溫。'},
-    {letter:'D',english:'Dreadful',label:'仍需練習',min:6,passed:false,message:'魔法世界還有許多待認識的細節，翻開閱讀地圖再來挑戰吧。'},
-    {letter:'T',english:'Troll',label:'山怪級',min:0,passed:false,message:'第一次探索也值得記錄。先從第一部小說出發，故事會慢慢變得熟悉。'}
+    {letter:'A',english:'Acceptable',label:'合格',min:18,passed:true,message:'你掌握了不少重要情節，還有幾條故事線等著重新發現。'},
+    {letter:'P',english:'Poor',label:'不佳',min:12,passed:false,message:'你已找到一些熟悉的線索，可以從答錯題目的相關小說開始重溫。'},
+    {letter:'D',english:'Dreadful',label:'糟糕',min:6,passed:false,message:'魔法世界還有許多待認識的細節，翻開閱讀地圖再來挑戰吧。'},
+    {letter:'T',english:'Troll',label:'山怪',min:0,passed:false,message:'第一次探索也值得記錄。先從第一部小說出發，故事會慢慢變得熟悉。'}
   ];
   const validAnswer=a=>Number.isInteger(a)&&a>=0&&a<4;
   const validAnswers=(a,complete=false)=>Array.isArray(a)&&a.length===30&&Array.from(a).every(v=>validAnswer(v)||(!complete&&v===null));
