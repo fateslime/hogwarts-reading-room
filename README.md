@@ -8,6 +8,10 @@
 
 這份儲存庫刻意不包含私人對話紀錄。若作業要求 AI 對話，請將本機的匯出紀錄另外加入繳交 ZIP；不要直接上傳對話到 GitHub。排除範圍見 [GITHUB-EXPORT.md](GITHUB-EXPORT.md)。
 
+## 2026-10-18 視覺更新
+
+人物與生物檔案共用紙邊及圖文配置；手機次要文字與操作範圍加大，人物與測驗解析採較短行長及一致段落間距。題庫與保存資料不變。實測與限制見 VERIFICATION.md。
+
 ## AI 維護入口
 
 之後的 AI 請先讀 [AGENTS.md](AGENTS.md)，再讀 [ARCHITECTURE.md](ARCHITECTURE.md) 的完整架構與資料契約，以及 [MAINTENANCE.md](MAINTENANCE.md) 的更新、測試、發布與故障處理流程。這三份文件隨來源碼保存，不必依賴本次對話才能接手。

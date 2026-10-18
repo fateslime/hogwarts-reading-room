@@ -1,6 +1,6 @@
 # 專案架構與資料契約
 
-維護基準：2026-10-17。這份文件描述目前實作；歷史版本見 VERIFICATION.md。給下一位維護者的入口是 AGENTS.md，具體更新步驟見 MAINTENANCE.md。
+維護基準：2026-10-18。這份文件描述目前實作；歷史版本見 VERIFICATION.md。給下一位維護者的入口是 AGENTS.md，具體更新步驟見 MAINTENANCE.md。
 
 ## 1. 產品範圍與設計
 
@@ -241,3 +241,12 @@ styles.css 有根層色票與字型變數、class 選擇器、padding/margin/bor
 私人託管網址、專案識別資料、憑證與完整對話不隨此副本提供。
 本機開啟 dist/index.html 不需要託管帳號。若需要部署，靜態發布目錄為 dist，設定目標應由擁有者另行提供。
 未實作的功能包括跨裝置帳號、後端寄信、上傳照片編輯器、後台 CMS、多語獨立網址。文件中的擴充建議不能被描述成已上線能力。
+
+### 2026-10-18 視覺契約
+
+- artwork-plate 包住照片或 creature-art。動物雪碧圖的背景定位與 artHeight 留在內層，不能改成對外層做 background-size，否則會裁切錯格。
+- 人物、動物詳情共用 profile-header；照片來源 figcaption 位於紙邊之外。維持 1200／832 比例、原色與來源文字。
+- styles.css 的三組具名規則：Shared book plates、Mobile type and touch targets、Reading rhythm。新變數 --plate-paper／--plate-inset／--plate-gap、--type-small／--touch-target、--reading-width／--reading-leading／--reading-space／--reading-paragraph 是集中調整點。
+- 800px 以下次要文字目標 14px、搜尋 16px、受測獨立操作至少 44×44px。窄版 book-route 允許區域內捲動，不可為放大點擊區讓整頁溢出。
+- 人物內文與 exam-review-list 上限 38rem；手機受可用寬度限制。exam-answer-group 只整理答案段落，exam-explanation 只標示解說；保留既有雙語文字與 data-* 行為。
+- 變更共用樣式後執行 tests/reading-layout.cjs，檢查中英文五種寬度、手機操作範圍及關閉按鈕。
