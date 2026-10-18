@@ -242,11 +242,13 @@ styles.css 有根層色票與字型變數、class 選擇器、padding/margin/bor
 本機開啟 dist/index.html 不需要託管帳號。若需要部署，靜態發布目錄為 dist，設定目標應由擁有者另行提供。
 未實作的功能包括跨裝置帳號、後端寄信、上傳照片編輯器、後台 CMS、多語獨立網址。文件中的擴充建議不能被描述成已上線能力。
 
-### 2026-10-18 視覺契約
+### 2026-10-18 最終視覺契約
 
-- artwork-plate 包住照片或 creature-art。動物雪碧圖的背景定位與 artHeight 留在內層，不能改成對外層做 background-size，否則會裁切錯格。
-- 人物、動物詳情共用 profile-header；照片來源 figcaption 位於紙邊之外。維持 1200／832 比例、原色與來源文字。
-- styles.css 的三組具名規則：Shared book plates、Mobile type and touch targets、Reading rhythm。新變數 --plate-paper／--plate-inset／--plate-gap、--type-small／--touch-target、--reading-width／--reading-leading／--reading-space／--reading-paragraph 是集中調整點。
-- 800px 以下次要文字目標 14px、搜尋 16px、受測獨立操作至少 44×44px。窄版 book-route 允許區域內捲動，不可為放大點擊區讓整頁溢出。
-- 人物內文與 exam-review-list 上限 38rem；手機受可用寬度限制。exam-answer-group 只整理答案段落，exam-explanation 只標示解說；保留既有雙語文字與 data-* 行為。
-- 變更共用樣式後執行 tests/reading-layout.cjs，檢查中英文五種寬度、手機操作範圍及關閉按鈕。
+- 人物區、神奇動物區與兩類 profile 保留本次美化前版型。沒有 artwork-plate；creature-art 仍直接承載雪碧圖背景與比例。app.js 與基準版本一致。
+- 保留手機規則使用 :not(:where(...)) 排除 .characters-section、.creatures-section、dialog[data-kind=profile] 內的元件，勿為了全域樣式意外改回使用者已拒絕的排版。
+- --type-small 為 14px、--touch-target 為 44px，僅套用保留改善範圍，不代表全站小字與控制項全部使用它們。
+- exam-review-list 上限 --reading-width:38rem；exam-answer-group 群組答案、exam-explanation 標示解析，保留原有雙語文字與 data-*。
+- .quiz-panel 與 .exam-sheet 共用同一規則：var(--line) 細框、--plate-paper:#fbf8f0、無陰影、直角，--assessment-inset 桌機 32px／600px 以下 20px。不要分別再新增不同面板框線。
+- tests/reading-layout.cjs 比較兩種測驗樣式、中英文五種寬度、保留範圍觸控目標及關閉按鈕；人物／動物範圍不宣稱 44px。
+
+保留原樣的已知限制：英文 320px 鷹馬檔案內部有 4px 橫向溢出，reading-layout 會明確回報 completed_with_known_issue，未宣稱完全通過。不可擴大這個例外或忽略新尺寸的失敗。

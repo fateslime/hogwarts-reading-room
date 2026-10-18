@@ -64,14 +64,14 @@
   }
   function openCharacter(i){
     const c=D.characters[i];if(!c)return;
-    openDialog('<div class="profile-header'+(c.portrait?'': ' profile-header-text')+'">'+(c.portrait?'<figure class="portrait"><div class="artwork-plate"><img src="'+c.portrait+'" alt="'+c.name+'的電影人物照片" width="1200" height="832" decoding="async"></div><figcaption><a href="'+c.portraitSource+'" target="_blank" rel="noopener noreferrer">電影照片來源：HarryPotter.com ↗</a></figcaption></figure>':'')+'<div><h2 id="dialog-title">'+c.name+'</h2><p class="book-english">'+c.english+'</p>'+favoriteButton('character',c)+'</div></div><p>'+c.intro+'</p><dl class="profile-facts">'+c.facts.map(([label,value])=>'<div><dt>'+label+'</dt><dd>'+value+'</dd></div>').join('')+'</dl><p>'+c.story+'</p>'+(c.spoiler?(showSpoilers?'<div class="spoiler-content"><h3>關鍵劇情 · 含結局</h3><p>'+c.spoiler+'</p></div>':'<p class="spoiler-hidden">此人物的重大劇情已隱藏，可在小說區開啟劇透。</p>'):'')+relatedPeople(c)+(c.creatures?'<div class="profile-related"><h3>相關神奇動物</h3><div class="related-links">'+c.creatures.map(n=>'<button class="text-link" data-creature="'+n+'">'+D.creatures[n].name+'</button>').join('')+'</div></div>':'')+relatedReading(c)+sourceLink(c),'profile');
+    openDialog('<div class="profile-header'+(c.portrait?'': ' profile-header-text')+'">'+(c.portrait?'<figure class="portrait"><img src="'+c.portrait+'" alt="'+c.name+'的電影人物照片" width="1200" height="832" decoding="async"><figcaption><a href="'+c.portraitSource+'" target="_blank" rel="noopener noreferrer">電影照片來源：HarryPotter.com ↗</a></figcaption></figure>':'')+'<div><h2 id="dialog-title">'+c.name+'</h2><p class="book-english">'+c.english+'</p>'+favoriteButton('character',c)+'</div></div><p>'+c.intro+'</p><dl class="profile-facts">'+c.facts.map(([label,value])=>'<div><dt>'+label+'</dt><dd>'+value+'</dd></div>').join('')+'</dl><p>'+c.story+'</p>'+(c.spoiler?(showSpoilers?'<div class="spoiler-content"><h3>關鍵劇情 · 含結局</h3><p>'+c.spoiler+'</p></div>':'<p class="spoiler-hidden">此人物的重大劇情已隱藏，可在小說區開啟劇透。</p>'):'')+relatedPeople(c)+(c.creatures?'<div class="profile-related"><h3>相關神奇動物</h3><div class="related-links">'+c.creatures.map(n=>'<button class="text-link" data-creature="'+n+'">'+D.creatures[n].name+'</button>').join('')+'</div></div>':'')+relatedReading(c)+sourceLink(c),'profile');
   }
   $('#character-search').addEventListener('input',renderCharacters);
   $('#character-filter').addEventListener('change',renderCharacters);
   $('#character-favorites').addEventListener('change',renderCharacters);
   function creatureArt(c,extra=''){
     const crop=c.artHeight?';background-size:300% '+(1024/c.artHeight*100)+'%;aspect-ratio:512/'+c.artHeight:'';
-    return '<div class="artwork-plate '+extra+'"><div class="creature-art" style="background-image:url(assets/'+c.art+');background-position:'+c.x+'% '+c.y+'%'+crop+'" role="img" aria-label="'+c.name+'的鋼筆淡彩插畫"></div></div>';
+    return '<div class="creature-art '+extra+'" style="background-image:url(assets/'+c.art+');background-position:'+c.x+'% '+c.y+'%'+crop+'" role="img" aria-label="'+c.name+'的鋼筆淡彩插畫"></div>';
   }
   let creatureFilter='all',creatureLimit=6;
   function renderCreatures(){
@@ -84,7 +84,7 @@
   }
   function openCreature(i){
     const c=D.creatures[i];if(!c)return;
-    openDialog('<div class="profile-header">'+creatureArt(c,'dialog-art')+'<div><h2 id="dialog-title">'+c.name+'</h2><p class="book-english">'+c.english+'</p>'+favoriteButton('creature',c)+'</div></div><p>'+c.detail+'</p><dl class="profile-facts"><div><dt>棲地</dt><dd>'+c.habitat+'</dd></div><div><dt>能力</dt><dd>'+c.ability+'</dd></div><div><dt>接近之前</dt><dd>'+c.care+'</dd></div></dl><p>'+c.extra+'</p>'+relatedPeople(c)+relatedReading(c)+sourceLink(c),'profile');
+    openDialog(creatureArt(c,'dialog-art')+'<div class="profile-title"><div><h2 id="dialog-title">'+c.name+'</h2><p class="book-english">'+c.english+'</p></div>'+favoriteButton('creature',c)+'</div><p>'+c.detail+'</p><dl class="profile-facts"><div><dt>棲地</dt><dd>'+c.habitat+'</dd></div><div><dt>能力</dt><dd>'+c.ability+'</dd></div><div><dt>接近之前</dt><dd>'+c.care+'</dd></div></dl><p>'+c.extra+'</p>'+relatedPeople(c)+relatedReading(c)+sourceLink(c),'profile');
   }
   $$('.filter').forEach(b=>b.addEventListener('click',()=>{$$('.filter').forEach(x=>{x.classList.toggle('active',x===b);x.setAttribute('aria-pressed',String(x===b));});creatureFilter=b.dataset.creatureFilter;creatureLimit=6;renderCreatures();}));
   $('#creature-search').addEventListener('input',()=>{creatureLimit=6;renderCreatures();});

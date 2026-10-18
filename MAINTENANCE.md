@@ -185,4 +185,4 @@ i18n-browser.cjs 掃描英文可見畫面與無障礙屬性的殘留中文字。
 
 ## 視覺調整的額外驗證
 
-執行 `node tests/reading-layout.cjs`，檢查中英文五種尺寸、手機獨立元件 44×44px、照片比例、長檔案關閉按鈕與解析群組。細節與 Design Tokens 見 ARCHITECTURE.md 的視覺契約。
+執行 `node tests/reading-layout.cjs`，檢查中英文五種尺寸、保留改善範圍的手機獨立元件 44×44px（排除原樣的人物／動物區）、照片比例、長檔案關閉按鈕與解析群組。另比對兩種測驗的面板樣式。細節與 Design Tokens 見 ARCHITECTURE.md 的最終視覺契約。
